@@ -1,0 +1,14 @@
+{
+  "time_utc": "2026-11-08T19:45:33.260579+00:00",
+  "config_sha256": "e89397f1cd07ad9ab38b35f50a382675d272ae0ba2e9f77c2416707f9a211f01",
+  "weighted_best_epoch": 2,
+  "weighted_dev_macro_f1": 0.9838128323058355,
+  "original_dev_macro_f1": 0.9863480924391689,
+  "source_selected_model": "original",
+  "weighted_checkpoint": "models/e4_followup/benign_weight2",
+  "weighted_checkpoint_sha256": "717b7d0ae2fe8990faa5ad7890fd2d50b912ee26e799396a8e8b0caee6fe3944",
+  "thresholds_sha256": "c612620cfbf8b644b3355fe1d89420858558bb4ee31567a5dc530be30952eee4",
+  "selection_data": "D1 validation only",
+  "external_results_read_for_this_selection": false,
+  "scientific_status": "Exploratory because method was motivated by previously observed test behavior"
+}

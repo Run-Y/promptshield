@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "validator": "supplied E5 build_main_table.validate_file",
+  "validator_sha256": "fc91b7560cd430fadeea432d5a7357e53c576fafd72a4c95bb2304371c1d1318",
+  "rows": 5086,
+  "errors": [],
+  "warnings": [],
+  "cost_rows_accepted": 2,
+  "model_size_and_latency_complete": true
+}

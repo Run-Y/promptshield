@@ -1,0 +1,8 @@
+{
+  "learning_rate": 5e-05,
+  "epoch": 3,
+  "dev_macro_f1": 0.984336503875083,
+  "checkpoint_dir": "models/e4/lr5e-5",
+  "checkpoint_rev": "91bf23d5058a957d045771849e671ad252c5d2c5e6b72c4ed9b8a64b7045ed72",
+  "config_sha256": "383a7940e8a8fd014f69b97b68233342de56dcd3d32ff27898fb56cb80abe3be"
+}

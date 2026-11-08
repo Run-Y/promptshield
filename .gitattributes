@@ -1,0 +1,17 @@
+# Preserve exact bytes for frozen E4 protocol/source/checkpoint hashes.
+/configs/e4*.json -text
+/experiments/e4/** -text
+/experiments/e4_followup/** -text
+/results/e4/** -text
+/results/e4_followup/** -text
+/models/e4/** -text
+/models/e4_followup/** -text
+/models/e4/**/tokenizer.json -diff linguist-generated=true
+/models/e4/**/vocab.json -diff linguist-generated=true
+/models/e4/**/merges.txt -diff linguist-generated=true
+/models/e4_followup/**/tokenizer.json -diff linguist-generated=true
+/models/e4_followup/**/vocab.json -diff linguist-generated=true
+/models/e4_followup/**/merges.txt -diff linguist-generated=true
+/results/e4/**/*.svg linguist-generated=true -whitespace
+/results/e4_followup/**/*.svg linguist-generated=true -whitespace
+/results/e4_followup/*.html linguist-generated=true

@@ -1,0 +1,17 @@
+{
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.22631-SP0",
+  "torch": "2.7.1+cu126",
+  "transformers": "4.46.3",
+  "tokenizers": "0.20.3",
+  "numpy": "1.26.4",
+  "pandas": "2.2.3",
+  "pyarrow": "18.1.0",
+  "sklearn": "1.5.2",
+  "cuda": "12.6",
+  "cpu_threads": 4,
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "total_vram_mib": 6143.5,
+  "cudnn": 90701,
+  "git_base_commit": "031b119918143e8048518b5bb6037d299b283b5f"
+}

@@ -1,0 +1,13 @@
+checkpoint_dir = models/e4/lr2e-5
+weights_sha256 = d43841dbaa6db09088e77f17f567b966dc5c4642adaac324eead707e5b3a10c3
+model_revision = e2da8e2f811d1448a5b465c236feacd80ffbac7b
+seed = 6405
+Run the following Python from the project root (CPU inference):
+import torch
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+texts = ['Can you explain Python decorators?']
+tokenizer = AutoTokenizer.from_pretrained('models/e4/lr2e-5', local_files_only=True)
+model = AutoModelForSequenceClassification.from_pretrained('models/e4/lr2e-5', local_files_only=True).eval()
+with torch.inference_mode():
+    score_attack = torch.softmax(model(**tokenizer(texts, padding=True, truncation=True, max_length=256, return_tensors='pt')).logits, dim=-1)[:, 1]
+print(score_attack.tolist())

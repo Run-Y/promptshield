@@ -16,6 +16,15 @@ data/pretrained/
 
 # Note: models/ checkpoints are kept in git for reproducible handoffs (<10MB)
 
+# E4 Transformer weights are distributed in the complete group handoff ZIP.
+models/e4/**/*.safetensors
+models/e4/**/*.bin
+models/e4/**/*.pt
+models/e4_followup/**/*.safetensors
+models/e4_followup/**/*.bin
+models/e4_followup/**/*.pt
+.cache/
+
 # OS & IDE
 .DS_Store
 Thumbs.db

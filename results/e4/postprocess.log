@@ -1,0 +1,49 @@
+test_scoring_started {"checkpoint_rev": "d43841dbaa6db09088e77f17f567b966dc5c4642adaac324eead707e5b3a10c3", "frozen_at": "2026-11-08T19:28:21.660869+00:00"}
+split_scored {"split": "d1_validation", "n": 1985}
+split_scored {"split": "d1_test", "n": 2101}
+split_scored {"split": "d2_test", "n": 116}
+split_scored {"split": "d3_test", "n": 545}
+split_scored {"split": "d4_test", "n": 339}
+scores_exported {"rows": 5086, "sha256": "8f62599eda9c9b460e9f3ec6c818729701b9c042ead768a3e097ff3bb24f7f2d"}
+benchmark_complete {"device": "cuda", "median_ms": 10.772550012916327, "p95_ms": 13.007499983359594, "mean_ms": 11.08505599811906, "batch_size": 1, "precision": "fp32", "warmup_trials": 20, "measured_trials": 100, "cpu_threads": 4, "includes_tokenization": true, "includes_transfer_softmax_cpu_scalar": true, "excludes_model_loading": true, "peak_allocated_mib": 510.25048828125, "peak_reserved_mib": 564.0, "model_id": "e4_roberta_base", "n_parameters": 124647170, "checkpoint_bytes": 503428743, "weights_bytes": 498612824, "checkpoint_rev": "d43841dbaa6db09088e77f17f567b966dc5c4642adaac324eead707e5b3a10c3", "hardware_gpu": "NVIDIA GeForce RTX 3060 Laptop GPU"}
+benchmark_complete {"device": "cpu", "median_ms": 44.9355999880936, "p95_ms": 54.28043999563669, "mean_ms": 45.94778500177199, "batch_size": 1, "precision": "fp32", "warmup_trials": 20, "measured_trials": 100, "cpu_threads": 4, "includes_tokenization": true, "includes_transfer_softmax_cpu_scalar": true, "excludes_model_loading": true, "peak_allocated_mib": null, "peak_reserved_mib": null, "model_id": "e4_roberta_base", "n_parameters": 124647170, "checkpoint_bytes": 503428743, "weights_bytes": 498612824, "checkpoint_rev": "d43841dbaa6db09088e77f17f567b966dc5c4642adaac324eead707e5b3a10c3", "hardware_gpu": "NVIDIA GeForce RTX 3060 Laptop GPU"}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\EE6405_E4\work\promptshield\experiments\e4\evaluate.py", line 196, in <module>
+    if __name__=="__main__":main()
+                            ^^^^^^
+  File "E:\EE6405_E4\work\promptshield\experiments\e4\evaluate.py", line 193, in main
+    {"score":score,"benchmark":benchmark,"explain":explain}[args.command]()
+  File "E:\EE6405_E4\work\promptshield\experiments\e4\evaluate.py", line 123, in benchmark
+    summary,values=latency(model,tok,frame.text.tolist(),device)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\EE6405_E4\.venv\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\EE6405_E4\work\promptshield\experiments\e4\evaluate.py", line 85, in latency
+    for text in texts[:cfg["warmup_trials"]]:one(text)
+                                             ^^^^^^^^^
+  File "E:\EE6405_E4\work\promptshield\experiments\e4\evaluate.py", line 84, in one
+    return torch.softmax(model(**features).logits.float(),dim=-1)[0,1].item()
+                         ^^^^^^^^^^^^^^^^^
+  File "E:\EE6405_E4\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\EE6405_E4\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DistilBertForSequenceClassification.forward() got an unexpected keyword argument 'token_type_ids'
+benchmark_started {"note": "Explicitly omit token_type_ids; the supplied E3 Bert tokenizer otherwise emits a field DistilBERT does not accept."}
+benchmark_complete {"device": "cuda", "median_ms": 10.776900002383627, "p95_ms": 12.648894984158687, "mean_ms": 11.08521299844142, "batch_size": 1, "precision": "fp32", "warmup_trials": 20, "measured_trials": 100, "cpu_threads": 4, "includes_tokenization": true, "includes_transfer_softmax_cpu_scalar": true, "excludes_model_loading": true, "peak_allocated_mib": 510.25048828125, "peak_reserved_mib": 564.0, "model_id": "e4_roberta_base", "n_parameters": 124647170, "checkpoint_bytes": 503428743, "weights_bytes": 498612824, "checkpoint_rev": "d43841dbaa6db09088e77f17f567b966dc5c4642adaac324eead707e5b3a10c3", "hardware_gpu": "NVIDIA GeForce RTX 3060 Laptop GPU"}
+benchmark_complete {"device": "cpu", "median_ms": 42.1527499856893, "p95_ms": 50.90100500383414, "mean_ms": 42.90920599596575, "batch_size": 1, "precision": "fp32", "warmup_trials": 20, "measured_trials": 100, "cpu_threads": 4, "includes_tokenization": true, "includes_transfer_softmax_cpu_scalar": true, "excludes_model_loading": true, "peak_allocated_mib": null, "peak_reserved_mib": null, "model_id": "e4_roberta_base", "n_parameters": 124647170, "checkpoint_bytes": 503428743, "weights_bytes": 498612824, "checkpoint_rev": "d43841dbaa6db09088e77f17f567b966dc5c4642adaac324eead707e5b3a10c3", "hardware_gpu": "NVIDIA GeForce RTX 3060 Laptop GPU"}
+benchmark_complete {"device": "cuda", "median_ms": 5.327499995473772, "p95_ms": 7.1607899881200865, "mean_ms": 5.555537999607623, "batch_size": 1, "precision": "fp32", "warmup_trials": 20, "measured_trials": 100, "cpu_threads": 4, "includes_tokenization": true, "includes_transfer_softmax_cpu_scalar": true, "excludes_model_loading": true, "peak_allocated_mib": 289.99072265625, "peak_reserved_mib": 326.0, "model_id": "e3_distilbert_base_uncased", "n_parameters": 66955010, "checkpoint_bytes": 268545194, "weights_bytes": 267832560, "checkpoint_rev": "3d87334843a23c0430820056f259883bbb74d23183c52da6fabd62419f93b973", "hardware_gpu": "NVIDIA GeForce RTX 3060 Laptop GPU"}
+benchmark_complete {"device": "cpu", "median_ms": 20.85135001107119, "p95_ms": 25.89372001530137, "mean_ms": 21.342092999548186, "batch_size": 1, "precision": "fp32", "warmup_trials": 20, "measured_trials": 100, "cpu_threads": 4, "includes_tokenization": true, "includes_transfer_softmax_cpu_scalar": true, "excludes_model_loading": true, "peak_allocated_mib": null, "peak_reserved_mib": null, "model_id": "e3_distilbert_base_uncased", "n_parameters": 66955010, "checkpoint_bytes": 268545194, "weights_bytes": 267832560, "checkpoint_rev": "3d87334843a23c0430820056f259883bbb74d23183c52da6fabd62419f93b973", "hardware_gpu": "NVIDIA GeForce RTX 3060 Laptop GPU"}
+case_occluded {"sample_id": "d1:test:000321", "score_attack": 0.0005379579379223287}
+case_occluded {"sample_id": "d1:test:000441", "score_attack": 0.9995471835136414}
+case_occluded {"sample_id": "d1:test:000471", "score_attack": 0.03399479016661644}
+case_occluded {"sample_id": "d1:test:000004", "score_attack": 0.0006800068076699972}
+case_occluded {"sample_id": "d1:test:000024", "score_attack": 0.0009118284215219319}
+case_occluded {"sample_id": "d1:test:000086", "score_attack": 0.9960882663726807}
+VERIFIED 76 checks
+Report generated; findings 275 words

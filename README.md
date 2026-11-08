@@ -471,3 +471,7 @@ results/e6/
 - 本目录不包含单独的 E1 报告；报告内容由组员整合进最终小组报告。
 
 请勿提交 `.DS_Store`、`__pycache__`、`.venv` 或以 `~$` 开头的临时文件。
+
+## E4 完整实验与 D3 误报补充分析
+
+E4 已完成 RoBERTa 学习率对照、同机成本比较、局部解释及完整分数交接。请从 [E4 实验全过程与组员交接](docs/e4/TEAM_HANDOFF_ZH.md) 阅读，再查看 [主实验报告](results/e4/report_section.md) 和 [D3 补充报告](results/e4_followup/D3误报诊断与改进实验.md)。主 E4 模型保持冻结，D3 补充实验明确标为探索；正式 tF1/t5 仍由 E6 统一生成。大型模型权重见单独提供的完整复现压缩包，哈希见 [checkpoint 清单](docs/e4/CHECKPOINTS.json)。

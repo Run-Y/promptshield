@@ -1,0 +1,25 @@
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at FacebookAI/roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+You're using a RobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{"epoch": 1, "update": 100, "total": 691, "seconds": 13.618980800005374}
+{"epoch": 1, "update": 200, "total": 691, "seconds": 27.149384800024563}
+{"epoch": 1, "update": 300, "total": 691, "seconds": 40.567412300006254}
+{"epoch": 1, "update": 400, "total": 691, "seconds": 54.245889400015585}
+{"epoch": 1, "update": 500, "total": 691, "seconds": 67.87574830002268}
+{"epoch": 1, "update": 600, "total": 691, "seconds": 81.11061320002773}
+epoch_complete {"epoch": 1, "learning_rate": 2e-05, "benign_weight": 2.0, "attack_weight": 1.0, "train_unweighted_loss": 0.19656081617638338, "train_weighted_loss": 0.17678993928117454, "dev_loss": 0.08895004467571845, "dev_n": 1985, "dev_tn": 1042, "dev_fp": 1, "dev_fn": 31, "dev_tp": 911, "dev_threshold": 0.5, "dev_fpr": 0.0009587727708533077, "dev_macro_f1": 0.9838085741145186, "dev_attack_recall": 0.9670912951167728, "dev_auroc": 0.9993129812947708, "train_seconds": 93.38235550001264, "peak_allocated_mib": 2634.27587890625}
+{"epoch": 2, "update": 100, "total": 691, "seconds": 13.23280500000692}
+{"epoch": 2, "update": 200, "total": 691, "seconds": 26.436615499987965}
+{"epoch": 2, "update": 300, "total": 691, "seconds": 39.71865009999601}
+{"epoch": 2, "update": 400, "total": 691, "seconds": 53.62704339998891}
+{"epoch": 2, "update": 500, "total": 691, "seconds": 66.7893119000073}
+{"epoch": 2, "update": 600, "total": 691, "seconds": 80.71147119998932}
+epoch_complete {"epoch": 2, "learning_rate": 2e-05, "benign_weight": 2.0, "attack_weight": 1.0, "train_unweighted_loss": 0.04796687283853506, "train_weighted_loss": 0.04762395946313397, "dev_loss": 0.07933876854540564, "dev_n": 1985, "dev_tn": 1040, "dev_fp": 3, "dev_fn": 29, "dev_tp": 913, "dev_threshold": 0.5, "dev_fpr": 0.0028763183125599234, "dev_macro_f1": 0.9838128323058355, "dev_attack_recall": 0.9692144373673036, "dev_auroc": 0.9994279933150536, "train_seconds": 94.14720410000882, "peak_allocated_mib": 2634.27587890625}
+{"epoch": 3, "update": 100, "total": 691, "seconds": 14.61617049999768}
+{"epoch": 3, "update": 200, "total": 691, "seconds": 28.658440799976233}
+{"epoch": 3, "update": 300, "total": 691, "seconds": 41.831274199998006}
+{"epoch": 3, "update": 400, "total": 691, "seconds": 55.98280659999}
+{"epoch": 3, "update": 500, "total": 691, "seconds": 69.54071869998006}
+{"epoch": 3, "update": 600, "total": 691, "seconds": 83.056520299986}
+epoch_complete {"epoch": 3, "learning_rate": 2e-05, "benign_weight": 2.0, "attack_weight": 1.0, "train_unweighted_loss": 0.01993858442762278, "train_weighted_loss": 0.01832675286736906, "dev_loss": 0.08603682673108994, "dev_n": 1985, "dev_tn": 1036, "dev_fp": 7, "dev_fn": 26, "dev_tp": 916, "dev_threshold": 0.5, "dev_fpr": 0.006711409395973154, "dev_macro_f1": 0.9833143352034286, "dev_attack_recall": 0.9723991507430998, "dev_auroc": 0.9992763402971585, "train_seconds": 94.79922479999368, "peak_allocated_mib": 2634.27587890625}
+FROZEN {"time_utc": "2026-11-08T19:45:33.260579+00:00", "config_sha256": "e89397f1cd07ad9ab38b35f50a382675d272ae0ba2e9f77c2416707f9a211f01", "weighted_best_epoch": 2, "weighted_dev_macro_f1": 0.9838128323058355, "original_dev_macro_f1": 0.9863480924391689, "source_selected_model": "original", "weighted_checkpoint": "models/e4_followup/benign_weight2", "weighted_checkpoint_sha256": "717b7d0ae2fe8990faa5ad7890fd2d50b912ee26e799396a8e8b0caee6fe3944", "thresholds_sha256": "c612620cfbf8b644b3355fe1d89420858558bb4ee31567a5dc530be30952eee4", "selection_data": "D1 validation only", "external_results_read_for_this_selection": false, "scientific_status": "Exploratory because method was motivated by previously observed test behavior"}
