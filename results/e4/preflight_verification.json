@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "accumulation_matches_full_batch_sgd": [
+    {
+      "effective_batch": 16,
+      "max_parameter_error": 0.0
+    },
+    {
+      "effective_batch": 10,
+      "max_parameter_error": 0.0
+    },
+    {
+      "effective_batch": 1,
+      "max_parameter_error": 0.0
+    }
+  ],
+  "time_utc": "2026-11-08T19:16:32.829644+00:00"
+}

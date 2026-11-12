@@ -1,0 +1,40 @@
+{
+  "study_id": "e4_source_only_false_alarm_followup",
+  "status": "exploratory_after_test_diagnosis",
+  "original_checkpoint_sha256": "d43841dbaa6db09088e77f17f567b966dc5c4642adaac324eead707e5b3a10c3",
+  "seed": 6405,
+  "intervention": {"benign_loss_weight": 2.0, "attack_loss_weight": 1.0},
+  "learning_rate": 0.00002,
+  "epochs": 3,
+  "batch_size": 16,
+  "selection": {
+    "dataset": "d1_validation",
+    "metric": "macro_f1",
+    "threshold": 0.5,
+    "epoch_tie_break": "earlier_epoch",
+    "baseline_vs_weighted_tie_break": "keep_original"
+  },
+  "threshold_policies": {
+    "default_0.5": "fixed 0.5",
+    "tF1_reference": "D1 validation maximum macro F1; ties highest threshold",
+    "t5_reference": "D1 validation maximum attack recall subject to empirical FPR <= 0.05; ties highest threshold",
+    "R95_exploratory": "highest D1 validation threshold with empirical attack recall >= 0.95"
+  },
+  "R95_recall_floor": 0.95,
+  "diagnostics": {
+    "character_length_bins": [0, 80, 160, 320, 640, 1000000],
+    "source_lexicon_min_document_frequency": 10,
+    "source_lexicon_top_terms": 30,
+    "case_selection": "first baseline false positive by source_row in each benign D3 technique",
+    "paired_bootstrap_replicates": 2000,
+    "bootstrap_seed": 6405
+  },
+  "boundaries": [
+    "The study is motivated by already observed D3/D4 results and is not a new untouched confirmatory test.",
+    "All model fitting uses D1 train only; checkpoint and threshold choices use D1 validation only.",
+    "No D2/D3/D4 label, text or template enters training or parameter selection.",
+    "No additional class-weight, recall-floor or learning-rate search is allowed after external evaluation.",
+    "The original E4 model and handoff remain unchanged; these outputs do not replace E6 official thresholds.",
+    "All external outcomes, including deterioration, will be reported. A fresh held-out source is needed for confirmation."
+  ]
+}

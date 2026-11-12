@@ -1,0 +1,17 @@
+{
+  "time_utc": "2026-11-08T19:47:43.468338+00:00",
+  "status": "passed",
+  "checks": [
+    "source-only policy recomputation",
+    "source-only checkpoint and model selection",
+    "frozen protocol/config/training code/weights hashes",
+    "independent threshold-count fixtures with ties",
+    "all dataset manifest hashes",
+    "unique IDs and aligned labels",
+    "weighted validation inference matches training",
+    "original model and score bytes unchanged",
+    "all eight prespecified policies reported on all five splits"
+  ],
+  "baseline_scores_sha256": "8f62599eda9c9b460e9f3ec6c818729701b9c042ead768a3e097ff3bb24f7f2d",
+  "analysis_code_sha256": "ade5120de829adccbc59a141e8f202bea8ef0ba349e48aca840b29fc7d9f25a5"
+}

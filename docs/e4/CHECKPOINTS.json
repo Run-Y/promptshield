@@ -1,0 +1,23 @@
+{
+  "distribution": "Complete group handoff ZIP; weights excluded from ordinary Git commits",
+  "checkpoints": [
+    {
+      "path": "models/e4/lr2e-5/model.safetensors",
+      "purpose": "E4 formal selected model",
+      "bytes": 498612824,
+      "sha256": "d43841dbaa6db09088e77f17f567b966dc5c4642adaac324eead707e5b3a10c3"
+    },
+    {
+      "path": "models/e4_followup/benign_weight2/model.safetensors",
+      "purpose": "E4 exploratory model; NOT selected",
+      "bytes": 498612824,
+      "sha256": "717b7d0ae2fe8990faa5ad7890fd2d50b912ee26e799396a8e8b0caee6fe3944"
+    },
+    {
+      "path": "models/e3/lr2e-5/model.safetensors",
+      "purpose": "Supplied E3 support model for cost comparison",
+      "bytes": 267832560,
+      "sha256": "3d87334843a23c0430820056f259883bbb74d23183c52da6fabd62419f93b973"
+    }
+  ]
+}

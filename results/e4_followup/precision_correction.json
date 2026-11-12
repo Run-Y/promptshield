@@ -1,0 +1,8 @@
+{
+  "time_utc": "2026-11-08T19:46:40.227856+00:00",
+  "max_threshold_change": 1.1102230246251565e-16,
+  "reason": "Default pandas float parser changed a boundary score at about 1e-16; preserve exact float32 inference scores.",
+  "data_read": "D1 validation only",
+  "validation_confusion_counts_changed": false,
+  "code_sha256": "265b28934270b577f1dd25467800e62dba5c6e1b9ebf71896e4be558f93541ff"
+}
